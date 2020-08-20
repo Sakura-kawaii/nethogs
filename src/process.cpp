@@ -128,6 +128,8 @@ static void sum_active_connections(Process *process_ptr, u_int64_t &sum_sent,
       curconn->getVal()->sumanddel(curtime, &recv, &sent);
       sum_sent += sent;
       sum_recv += recv;
+      sum_sent = sum_sent/200;
+      sum_recv = sum_recv/200;
       previous = curconn;
       curconn = curconn->getNext();
     }
