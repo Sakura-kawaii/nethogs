@@ -87,4 +87,4 @@ device *get_devices(int devc, char **devicenames, bool all) {
   return devices;
 }
 
-device *get_default_devices() { return get_devices(0, NULL, false); }
+device *get_default_devices() { return get_devices(1, NULL, false); }
